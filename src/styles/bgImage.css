@@ -1,0 +1,15 @@
+.portfolio-card[data-project="igglesblitz"]::before {
+	background-image: url("../images/projects/Blitz.png");
+}
+
+.portfolio-card[data-project="marsweather"]::before {
+	background-image: url("../images/projects/mars/shortsonmars-mobile.png");
+}
+
+.portfolio-card[data-project="todoapp"]::before {
+	background-image: url("../images/projects/todo.png");
+}
+
+.portfolio-card[data-project="portfolio"]::before {
+	background-image: url("../images/projects/NNPortfolio.png");
+}

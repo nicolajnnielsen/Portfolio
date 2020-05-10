@@ -1,12 +1,18 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import {ReactComponent as Logo} from '../images/logo.svg';
 
 const Header = () => (
-	<header>
-		<h1>Nicolaj N. Nielsen Porfolio</h1>
-		<NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink>
-		<NavLink to="/portfolio" activeClassName="is-active" >Portfolio</NavLink>
-		<NavLink to="/contact" activeClassName="is-active" >Contact</NavLink>
+	<header className="site-header">
+		<Logo />
+		{/* <h1>Nicolaj N. Nielsen Porfolio</h1> */}
+		<nav className="site-nav">
+			<NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink>
+			<NavLink to="/about" activeClassName="is-active" >About Me</NavLink>
+			<Logo />
+			<NavLink to="/portfolio" activeClassName="is-active" >Portfolio</NavLink>
+			<NavLink to="/contact" activeClassName="is-active" >Contact</NavLink>
+		</nav>
 	</header>
 )
 
