@@ -48,7 +48,14 @@
 	color: white;
 }
 
+.about-text {
+	grid-area: content-3;
+	columns: 2 45ch;
+	column-gap: 1.5rem;
+}
+
 .skills {
+	grid-area: content-2;
 	position: relative;
 	padding: 0;
 	display: grid;
