@@ -17,14 +17,14 @@
 	transition: 200ms;
 
 	&.page-about {
-		grid-template-rows: 80px 320px auto 450px 70px;
+		grid-template-rows: 80px 320px 500px auto 70px;
 	}
 }
 
 @media (min-width: 791px) {
 	.page-wrapper {
-		grid-template-columns: minmax(0, 1fr) minmax(300px, 4fr) minmax(300px, 4fr) minmax(0, 1fr);
-		grid-template-rows: 120px auto auto;
+		grid-template-columns: minmax(0, 2rem) minmax(300px, 4fr) minmax(300px, 4fr) minmax(0, 2rem);
+		grid-template-rows: 120px auto auto 80px;
 		grid-template-areas:
 		"header header header header" 
 		". content-1 content-2 ." 
@@ -34,20 +34,26 @@
 		padding: 0;
 
 		&.page-portfolio-item {
-			grid-template-rows: 120px auto auto;
+			grid-template-rows: 120px auto auto 80px;
 		}
 		&.page-portfolio {
-			grid-template-rows: 120px auto 0;
+			grid-template-rows: 120px auto 0 80px;
 		}
 		&.page-front {
-			grid-template-rows: 120px 250px auto;
+			grid-template-rows: 120px 250px auto 80px;
 		}
 		&.page-contact {
-			grid-template-rows: 120px 350px 0px;
+			grid-template-rows: 120px 550px 0px 80px;
 		}
 		&.page-about {
-			grid-template-rows: 120px 500px 300px;
+			grid-template-rows: 120px 500px auto 80px;
 		}
+	}
+}
+
+@media (min-width: 900px) {
+	.page-wrapper {
+		grid-template-columns: minmax(0, 1fr) minmax(300px, 4fr) minmax(300px, 4fr) minmax(0, 1fr);
 	}
 }
 
@@ -60,7 +66,7 @@
 			grid-template-rows: 120px auto 0;
 		}
 		&.page-contact {
-			grid-template-rows: 120px 600px 0;
+			grid-template-rows: 120px 650px 0;
 		}
 		&.page-front {
 			grid-template-rows: 120px 250px 450px;

@@ -22,8 +22,8 @@ const FrontPage = () => {
 				<h1>Nicolaj N. Nielsen</h1>
 				<h2>Front-end Developer with a hunger for learning, a focus on straightforward code and userfriendly</h2>
 			</motion.main>
-			<motion.section className="portfolio frontpage-portfolio content-area__3 skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={{...PageTransition, delay: 0}} >
-				<h2 className="frontpage-portfolio__header">Project Highlights</h2>
+			<motion.section aria-labelledby="header-projectHighlights" className="portfolio frontpage-portfolio content-area__3 skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={{...PageTransition, delay: 0}} >
+				<h2 id="header-projectHighlights" className="frontpage-portfolio__header">Project Highlights</h2>
 				{Object.entries(projects).map(([key, values], index) => {
 					if (index < 3) {
 						return <PortfolioCard key={key} keyName={key} image={values.images[1]} title={values.title} desc={values.shortDesc} />

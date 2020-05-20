@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {Link} from 'react-router-dom';
 
-const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
+const transition = {duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 const articleVar = {
 	initial: { opacity: 0 },
 	enter: { opacity: 1, transition },

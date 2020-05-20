@@ -22,17 +22,35 @@
 	}
 }
 
-@media (min-width: $desktop-breakpoint) {
+.object-header {
+	font-size: 1rem;
+	color: white;
+	font-weight: normal;
+}
+
+@media (min-width: 550px) {
+	.about-info__object {
+		font-size: 1.25rem;
+	}
+}
+
+@media (min-width: 791px) {
 	.indent {
 		padding-left: 2em;
 	}
 	
 	.about-info__object {
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 	
 		> p {
 			margin: 0 0 0.5em;
 		}
+	}
+}
+
+@media (min-width: 961px) {
+	.about-info__object {
+		font-size: 1.25rem;
 	}
 }
 
@@ -50,8 +68,8 @@
 
 .about-text {
 	grid-area: content-3;
-	columns: 2 45ch;
-	column-gap: 1.5rem;
+	columns: 2 35ch;
+	column-gap: 1rem;
 }
 
 .skills {
@@ -75,7 +93,7 @@
 	grid-column: 1;
 	transition: 500ms ease-in-out;
 	cursor: pointer;
-	transition: clip-path 400ms ease-in, z-index 500ms 200ms, background 1000ms, box-shadow 400ms;
+	transition: clip-path 400ms ease-in, z-index 500ms 200ms, background 250ms, box-shadow 400ms;
 	height: 100%;
 	width: 100%;
 	background-color: $primary-red;
@@ -89,6 +107,14 @@
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(221, 0, 72, 0.5), inset 2px 2px 5px rgba(221, 0, 72, 0.5), inset -2px -2px 5px rgba(0, 0, 0, 0.3);
 
 	clip-path: circle(3% at 95% 90%);
+
+	&:hover {
+		background-color: $primary-blue;
+	}
+
+	&:focus > span {
+		outline: 1px dotted white;
+	}
 }
 
 // @for $i from 1 through 5 {
@@ -151,39 +177,25 @@
 }
 
 @media (min-width: 791px) {
-	.skill {
-		@include skillPath(1, 3rem, 8%, 20%);
-		@include skillPath(2, 3rem, 92%, 80%);
-		@include skillPath(3, 3rem, 92%, 20%);
-		@include skillPath(4, 3rem, 8%, 80%);
-		@include skillPath(5, 3rem, 45%, 25%);
-		@include skillPath(6, 3rem, 55%, 75%);
-		@include skillPath(7, 3rem, 24%, 35%);
-		@include skillPath(8, 3rem, 76%, 65%);
-		@include skillPath(9, 3rem, 30%, 75%);
-		@include skillPath(10, 3rem, 70%, 25%);
-	}
-
 	.skill__btn {
 		font-size: 1rem;
 	}
 }		
 
-
-// .skill:hover {
-// 	clip-path: circle(100%);
-// 	z-index: 10;
-// 	background-color: $primary-blue;
-// 	.skill__btn {
-// 		opacity: 0;
-// 	}
-
-// 	.skill__text, .skill__title {
-// 		transition: 500ms;
-// 		opacity: 1;
-// 	}
-		
-// }
+@media (min-width: 961px) {
+	.skill {
+		@include skillPath(1, 2.7rem, 15%, 14%);
+		@include skillPath(2, 2.7rem, 85%, 86%);
+		@include skillPath(3, 2.7rem, 85%, 14%);
+		@include skillPath(4, 2.7rem, 15%, 86%);
+		@include skillPath(5, 2.7rem, 35%, 25%);
+		@include skillPath(6, 2.7rem, 65%, 75%);
+		@include skillPath(7, 2.7rem, 20%, 54%);
+		@include skillPath(8, 2.7rem, 80%, 46%);
+		@include skillPath(9, 2.7rem, 40%, 65%);
+		@include skillPath(10, 2.7rem, 60%, 35%);
+	}
+}
 
 .skill.cls-active {
 	clip-path: circle(100%);
@@ -199,4 +211,11 @@
 		opacity: 1;
 	}
 		
+}
+
+@media (min-width: 961px) {
+	.about-text {
+		columns: 2 45ch;
+		column-gap: 1.5rem;
+	}
 }

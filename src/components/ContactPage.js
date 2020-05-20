@@ -10,6 +10,7 @@ const ContactPage = () => {
 	const [emailState, setEmailState] = useState({value: "", error: null, focused: false, valid: null});
 	const [nameState, setNameState] = useState({value: "", error: null, focused: false, valid: null});
 	const [msgState, setMsgState] = useState({value: "", error: null, focused: false, valid: null});
+	const [submitState, setSubmitState] = useState({submitted: false, status: null});
 
 	const setFocusFlag = (e) => {
 		const targetInput = e.target.id;
@@ -110,17 +111,23 @@ const ContactPage = () => {
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
 			body: encode({ "form-name": "contact", "email": emailState.value, "name": nameState.value, "message": msgState.value })
 		})
-		.then(() => console.log("Succes"))
-		.catch(error => console.log(error));
+		.then(() => submitSuccess())
+		.catch(error => setSubmitState({submitted: true, status: error}));
 
 		e.preventDefault();
 	}
 
-	
 	const encode = (data) => {
 		return Object.keys(data)
 			.map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
 			.join("&");
+	  }
+
+	const submitSuccess = () => {
+		setSubmitState({submitted: true, status: 'success'})
+		setEmailState({value: "", error: null, focused: false, valid: null});
+		setNameState({value: "", error: null, focused: false, valid: null});
+		setMsgState({value: "", error: null, focused: false, valid: null});
 	  }
 
 	return (
@@ -149,7 +156,7 @@ const ContactPage = () => {
 				</div>
 				<div className="form__group">
            			<label htmlFor="message">Message</label>
-					<textarea id="message" name="message" placeholder="message" rows="5" 
+					<textarea id="message" name="message" placeholder="message" rows="5" cols="15" 
 						className={msgState.focused ? validationClass('message') : ""} 
 						value={msgState.value}
 						onBlur={setFocusFlag} 
@@ -157,10 +164,17 @@ const ContactPage = () => {
 					></textarea>
 					<span className="form__msg">{msgState.focused && msgState.error ? msgState.error : String.fromCharCode(160)}</span>
          		</div>
-				 <button className="btn form__submit" disabled={btnDisabled} type="submit">Send</button>
+				<button className="btn form__submit" disabled={btnDisabled} type="submit">Send</button>
+				{submitState.submitted && <SubmitMessage status={submitState.status} />}
 			</form>
 		</motion.main>
 	);
 }
+
+const SubmitMessage = ({status}) => (
+	<p className="submit-msg">
+		{status === 'success' ? <span className="submit-msg--success">Message succesfully sent. I will get back to you as soon as possible.</span> : <span className="submit-msg--fail">Something went wrong trying to send the message, please try again. If the issue persists, please try again at a later point.</span> }
+	</p>
+)
 
 export default ContactPage;

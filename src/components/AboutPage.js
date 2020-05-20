@@ -13,9 +13,9 @@ class AboutPage extends Component {
 			wordpress: {id: 'wordpress', title: 'WordPres', text: 'I have a good understanding of working with WordPress and it\'s file structure and admin tools. I have basic experience with theme development, where I have developed a couple of themes using Underscores.', active: false},
 			php: {id: 'php', title: 'PHP', text: 'I have experience with PHP from working in Magento and WordPress, where I\'ve mostly worked with the template language side of things. But I also have a little experience with both OOP and know how to find answers for any challenges.', active: false},
 			sql: {id: 'sql', title: 'T-SQL / mySql', text: 'I know basic querying, and how to accomplish tasks with both queries and GUI\'s like myphpadmin. Aditionally I have basic knowledge of designing simple relational databases.', active: false},
-			// strapi: {id: 'strapi', title: 'Strapi', text: 'New but learning, it\' very cool', active: false},
+			strapi: {id: 'strapi', title: 'Strapi', text: 'New but learning, it\' very cool', active: false},
 			magento: {id: 'magento', title: 'Magento', text: 'Worked with it for a year, primarily Magento 1, but also some M2. Mostly front-end work, building new pages, editing templates and layout, as well as maintenance in the admin area.', active: false},
-			// gatsby: {id: 'gatsby', title: 'Gatsby', text: 'I know nothing', active: false},
+			gatsby: {id: 'gatsby', title: 'Gatsby', text: 'I know nothing', active: false},
 		}
 	}
 
@@ -27,7 +27,6 @@ class AboutPage extends Component {
 					[id]: {
 						...prevState.skills[id],
 						active: !prevState.skills[id].active
-					// need to set all other to false as well
 					}
 				}
 			}	
@@ -51,7 +50,7 @@ class AboutPage extends Component {
 			<Fragment>
 				<motion.main className="about-info content-area__1 skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={PageTransition}>
 					<div className="about-info__object">
-						<p>whoisnicolaj: {"{"}</p>
+						<h1 className="object-header">whoisnicolaj: {"{"}</h1>
 						<p className="indent"><span className="object-key">name:</span> <span className="object-value">'Nicolaj N. Nielsen'</span>,</p>
 						<p className="indent"><span className="object-key">age:</span> <span className="object-value">29</span>,</p>
 						<p className="indent"><span className="object-key">education:</span> <span className="object-value">'Multimedia Design and Communication - University College Nordjylland'</span>,</p>
@@ -60,7 +59,12 @@ class AboutPage extends Component {
 						<p>{"}"}</p>
 					</div>
 				</motion.main>
-				<motion.section className="about-text skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={PageTransition} >
+				<motion.section aria-label="My skills" className="skills skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={{...PageTransition, delay: 0}}>
+					{Object.entries(this.state.skills).map(([key, value]) => (
+						<Skill key={key} id={value.id} title={value.title} text={value.text} active={value.active} toggleActive={this.toggleActive} />
+					))}
+				</motion.section>
+				<motion.article className="about-text skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={PageTransition} >
 					<p>
 						As a developer I am on a never-ending quest of learning, my natural curiosity make me seek out new skills and ways of doing things. I am a quick learner who picks up on the basics of new systems, frameworks or languages.
 					</p>
@@ -77,12 +81,7 @@ class AboutPage extends Component {
 					<p>
 						My educational background has been more focused on styling. design and ensuring a strong connection between those and the message that will be communicated. My strengths in that regard are around making highly user-friendly solutions. After graduating I have put a greater emphasis on the more programming heavy aspects of development, and have specifically focused on improving my JavaScript skills. 
 					</p>
-				</motion.section>
-				<motion.section className="skills skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={{...PageTransition, delay: 0}}>
-					{Object.entries(this.state.skills).map(([key, value]) => (
-						<Skill key={key} id={value.id} title={value.title} text={value.text} active={value.active} toggleActive={this.toggleActive} />
-					))}
-				</motion.section>
+				</motion.article>
 			</Fragment>
 		)
 	};

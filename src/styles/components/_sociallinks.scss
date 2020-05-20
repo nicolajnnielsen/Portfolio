@@ -4,11 +4,12 @@
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(218, 218, 218, 0.04);
 	border-radius: 15px;
 	padding: 5px;
+	justify-content: space-evenly;
 
 	a {
 		display: flex;
 		justify-content: center;
-		flex: 0 1 auto;
+		flex: 0 1 60px;
 		height: 100%;
 
 		svg {
@@ -17,7 +18,7 @@
 	}
 }
 
-@media (min-width: 791px) {
+@media (min-width: 900px) {
 	.socialLinks {
 		flex-direction: column;
 		position: fixed;

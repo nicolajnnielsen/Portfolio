@@ -10,15 +10,10 @@
 }
 
 .frontpage-intro {
-	// grid-area: content-1;
-	// grid-area: intro;
 	box-shadow: none;
-	// TODO - Fallback for clamp
+	// TODO - Fallback for clamp - include a rem in middle value to support font size change
 
 	h1 {
-		color: #8f1421;
-		color: #ca1d24;
-		color: #b22222;
 		color: #DD0048;
 		/* color: #ff2975; */
 		color: #16B4DE;
@@ -38,14 +33,27 @@
 	grid-row: content-2 / content-3;
 	display: flex;
 	flex-wrap: wrap;
+	gap: 0;
 
 	h2 {
 		flex: 1 1 100%;
+		margin-bottom: 1rem;
 	}
 
 	.portfolio-card {
 		flex: 1 1 275px;
 		height: 300px;
+		margin-bottom: 1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 622px) {
+	.portfolio.frontpage-portfolio .portfolio-card {
+		margin: 0 0.25rem 1rem;
 	}
 }
 
@@ -55,9 +63,15 @@
 		grid-row: content-2 / content-3;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 50px 1fr;
+		gap: 0.5rem 1rem;
+
+		h2 {
+			margin-bottom: 0;
+		}
 	
 		.portfolio-card {
 			height: auto;
+			margin: 0;
 		}
 	}
 }

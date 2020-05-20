@@ -16,7 +16,7 @@ const PortfolioPage = () => {
 	}, []);
 
 	return (
-			<motion.main className="portfolio content-area__1and2 skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={{enter: {transition: {staggerChildren: 0.1}}}} >
+			<motion.main className="portfolio content-area__1and2 skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={{enter: {transition: {staggerChildren: 0.2}}}} >
 				{Object.entries(projects).map(([key, values], index) => (
 					<PortfolioCard key={key} keyName={key} image={values.images[1]} title={values.title} desc={values.shortDesc} />
 				))}
