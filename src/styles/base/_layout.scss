@@ -32,15 +32,14 @@
 		". aside aside .";
 		grid-gap: 1.5em 1em;
 		padding: 0;
-
-		&.page-portfolio-item {
-			grid-template-rows: 120px auto auto 80px;
-		}
 		&.page-portfolio {
 			grid-template-rows: 120px auto 0 80px;
 		}
 		&.page-front {
 			grid-template-rows: 120px 250px auto 80px;
+		}
+		&.page-portfolio-item {
+			grid-template-rows: 120px auto auto 80px;
 		}
 		&.page-contact {
 			grid-template-rows: 120px 550px 0px 80px;
@@ -59,9 +58,6 @@
 
 @media (min-width: 961px) {
 	.page-wrapper {
-		&.page-portfolio-item {
-			grid-template-rows: 120px auto auto;
-		}
 		&.page-portfolio {
 			grid-template-rows: 120px auto 0;
 		}
@@ -71,8 +67,11 @@
 		&.page-front {
 			grid-template-rows: 120px 250px 450px;
 		}
+		&.page-portfolio-item {
+			grid-template-rows: 120px auto auto;
+		}
 		&.page-about {
-			grid-template-rows: 120px 450px 620px;
+			grid-template-rows: 120px 450px 650px;
 		}
 	}
 }
@@ -80,15 +79,7 @@
 @media (min-width: 1200px) {
 	.page-wrapper {
 		&.page-about {
-			grid-template-rows: 120px 400px 470px;
-		}
-	}
-}
-
-@media (min-width: 1200px) {
-	.page-wrapper {
-		&.page-about {
-			grid-template-rows: 120px 400px 470px;
+			grid-template-rows: 120px 400px 500px;
 		}
 	}
 }
@@ -96,8 +87,14 @@
 @media (min-width: 1500px) {
 	.page-wrapper {
 		&.page-about {
-			grid-template-rows: 120px 400px 380px;
+			grid-template-rows: 120px 400px 430px;
 		}
+	}
+}
+
+@media (min-width: 2000px) {
+	.page-wrapper {
+		grid-template-columns: minmax(0, 1fr) minmax(300px, 800px) minmax(300px, 800px) minmax(0, 1fr);
 	}
 }
 

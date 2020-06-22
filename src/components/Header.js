@@ -4,6 +4,7 @@ import {ReactComponent as Logo} from '../images/logo.svg';
 
 const Header = () => (
 	<header className="site-header">
+		<Logo />
 		<nav className="site-nav">
 			<NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink>
 			<NavLink to="/about" activeClassName="is-active" >About Me</NavLink>

@@ -6,6 +6,7 @@
 	src: local('Exo 2 Regular'), local('Exo2-Regular'),
 		 url('../../fonts/exo-2-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 		 url('../../fonts/exo-2-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	font-display: swap;
 }
   
 /* exo-2-italic - latin */
@@ -16,6 +17,7 @@
 	src: local('Exo 2 Italic'), local('Exo2-Italic'),
 		 url('../../fonts/exo-2-v7-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 		 url('../../fonts/exo-2-v7-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	font-display: swap;
 }
   
 /* exo-2-700 - latin */
@@ -26,6 +28,7 @@
 	src: local('Exo 2 Bold'), local('Exo2-Bold'),
 		 url('../../fonts/exo-2-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 		 url('../../fonts/exo-2-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	font-display: swap;
 }
   
 /* exo-2-900 - latin */
@@ -36,6 +39,7 @@
 	src: local('Exo 2 Black'), local('Exo2-Black'),
 		 url('../../fonts/exo-2-v7-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
 		 url('../../fonts/exo-2-v7-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	font-display: swap;
 }
 
 @font-face {
@@ -43,8 +47,9 @@
     font-weight: normal;
 	font-style: normal;
 	src: local('Nasalization Regular'), local('Nasalization'), local('Nasalization-rg'),
-	url('../../fonts/nasalization-rg-webfont.woff2') format('woff2'),
-	url('../../fonts/nasalization-rg.woff') format('woff');
+		url('../../fonts/nasalization-rg-webfont.woff2') format('woff2'),
+		url('../../fonts/nasalization-rg.woff') format('woff');
+	font-display: swap;
 }
 
 @font-face {
@@ -52,8 +57,9 @@
     font-weight: bold;
 	font-style: normal;
 	src: local('Nasalization Bold'), local('Nasalization-bd'),
-	url('../../fonts/nasalization-bd.woff2') format('woff2'),
-	url('../../fonts/nasalization-bd.woff') format('woff');
+		url('../../fonts/nasalization-bd.woff2') format('woff2'),
+		url('../../fonts/nasalization-bd.woff') format('woff');
+	font-display: swap;
 }
   
 
@@ -82,7 +88,7 @@ body {
 	box-shadow: 5px 5px 10px #0c0c0c, -5px -5px 10px #323232;
 	box-shadow: 40px 40px 80px #0b0b0b, -40px -40px 80px #191919;
 	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4), -10px -10px 15px rgba(218, 218, 218, 0.04);
-	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(218, 218, 218, 0.05), inset 2px 2px 5px rgba(218, 218, 218, 0.05), inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(218, 218, 218, 0.05), inset 1px 1px 2px rgba(218, 218, 218, 0.05), inset -1px -1px 2px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -195,6 +201,7 @@ input[type="text"], input[type="email"], textarea {
 	&:focus {
 		box-shadow: inset -1px -1px 1px rgba(255, 255, 255,0.1), inset 1px 1px 1px rgba(0, 0, 0, 0.8);
 		border: 1px solid rgba(22, 180, 222, 0.2);
+		outline-color: rgba(22, 180, 222, 0.5);
 	}
 
 	&::placeholder {
@@ -203,10 +210,16 @@ input[type="text"], input[type="email"], textarea {
 
 	&.valid {
 		border: 1px solid rgba(39, 222, 22, 0.2);
+		&:focus {
+			outline-color: rgba(39, 222, 22, 0.5);
+		}
 	}
 
 	&.invalid {
 		border: 1px solid rgba(222, 22, 22, 0.2);
+		&:focus {
+			outline-color: rgba(222, 22, 22, 0.6);
+		}
 	}
 }
 

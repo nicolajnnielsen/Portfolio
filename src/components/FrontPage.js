@@ -20,7 +20,7 @@ const FrontPage = () => {
 		<Fragment>
 			<motion.main className="frontpage-intro content-area__1and2" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={PageTransition}>
 				<h1>Nicolaj N. Nielsen</h1>
-				<h2>Front-end Developer with a hunger for learning, a focus on straightforward code and userfriendly</h2>
+				<h2>Front-end Developer with a hunger for learning, a focus on straightforward code to build user friendly interfaces. </h2>
 			</motion.main>
 			<motion.section aria-labelledby="header-projectHighlights" className="portfolio frontpage-portfolio content-area__3 skeuMorphBg" initial="initial" animate="enter" exit="exit" variants={PageVariant} transition={{...PageTransition, delay: 0}} >
 				<h2 id="header-projectHighlights" className="frontpage-portfolio__header">Project Highlights</h2>

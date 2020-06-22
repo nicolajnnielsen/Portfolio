@@ -1,15 +1,11 @@
 .portfolio-card[data-project="igglesblitz"]::before {
-	background-image: url("../images/projects/Blitz.png");
+	background-image: url("../images/projects/igglesblitz/IB_Home_Desktop.png");
 }
 
 .portfolio-card[data-project="marsweather"]::before {
 	background-image: url("../images/projects/mars/shortsonmars-mobile.png");
 }
 
-.portfolio-card[data-project="todoapp"]::before {
-	background-image: url("../images/projects/todo.png");
-}
-
 .portfolio-card[data-project="portfolio"]::before {
-	background-image: url("../images/projects/NNPortfolio.png");
+	background-image: url("../images/projects/portfolio/Portfolio_Home_Desktop.png");
 }

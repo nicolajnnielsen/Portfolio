@@ -130,11 +130,6 @@
 				box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 10px rgba(218, 218, 218, 0.04);
 				border: 2px solid rgba(22, 180, 222, 0.2);
 				text-shadow: none;
-
-				&:hover {
-					color: $primary-blue;
-					text-shadow: none;
-				}
 			}
 		}
 	}
@@ -144,7 +139,22 @@
 	.site-nav a {
 		font-size: $l-size;
 	}
-
 }
 
+@media (pointer: fine) {
+	.site-nav a:hover {
+		color: $primary-blue;
+		text-shadow: none;
+	}
+}
 
+a:focus {
+	outline: 1px dotted currentColor;
+}
+
+@media (min-width: 2000px) {
+	.site-header {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+}
