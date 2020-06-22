@@ -9,7 +9,7 @@ import ErrorImg from '../images/logo.svg';
 
 const PortfolioItem = (props) => {
 	const {id} = useParams();
-	const [project, setProject] = useState(projectState.projects[id]);
+	const [project] = useState(projectState.projects[id]);
 	const [showThumb, setShowThumb] = useState(true);
 
 	useEffect(() => {

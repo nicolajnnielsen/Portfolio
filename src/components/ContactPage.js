@@ -92,6 +92,7 @@ const ContactPage = () => {
 			return;
 		}
 		setBtnDisabled(formValidation());
+	// eslint-disable-next-line 
 	}, [nameState.value, emailState.value, msgState.value]);
 
 

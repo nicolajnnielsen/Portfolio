@@ -16,7 +16,6 @@ import igglesblitzImg2 from './images/projects/igglesblitz/IB_Home_Desktop-botto
 import igglesblitzImg3 from './images/projects/igglesblitz/IB_Home_Mobile.png';
 import igglesblitzImg4 from './images/projects/igglesblitz/IB_Home_Mobile-menu.png';
 import igglesblitzImg5 from './images/projects/igglesblitz/IB_Home_Desktop-mg.png';
-import igglesblitzImg6 from './images/projects/igglesblitz/IB_Home_Desktop-mg-top.png';
 import igglesblitzImg7 from './images/projects/igglesblitz/IB_Single_Mobile.png';
 
 const projectsState = {
@@ -117,7 +116,7 @@ const projectsState = {
 			id: 1,
 			title: 'IgglesBlitz', 
 			skillsUsed: ['WordPress', 'CSS3', 'SCSS', 'JavaScript', 'Gulp'],
-			gitLink: 'linktoGithub',
+			gitLink: 'https://github.com/nicolajnnielsen/IgglesBlitz',
 			images: [
 				{
 					original: igglesblitzImg1,
@@ -155,13 +154,6 @@ const projectsState = {
 					description: 'Home page with alternative Midnight green design',
 				},
 				{
-					original: igglesblitzImg6,
-					originalAlt: 'Cake',
-					thumbnail: igglesblitzImg6,
-					thumbnailAlt: 'Thumbcake',
-					description: 'Cake',
-				},
-				{
 					original: igglesblitzImg7,
 					originalAlt: 'Post page mobile',
 					thumbnail: igglesblitzImg7,
@@ -187,10 +179,10 @@ const projectsState = {
 		},
 		portfolio: {
 			id: 2,
-			title: 'My Portfolio', 
+			title: 'Portfolio', 
 			skillsUsed: ['JS', 'React', 'CSS3', 'SCSS', 'Framer Motion', 'Skeumorphism'],
-			link: 'lintoproject',
-			gitLink: 'linktoGithub',
+			link: 'https://nicolajnielsen.dev/',
+			gitLink: 'https://github.com/nicolajnnielsen/Portfolio',
 			images: [
 				{
 					original: portfolioImg1,
@@ -242,7 +234,7 @@ const projectsState = {
 					description: 'Portfolio page on mobile',
 				},
 			],
-			shortDesc: 'My Portfolio',
+			shortDesc: 'My Portfolio site made with React, containing information for getting to know me, and displays some of the projects I\'ve built.',
 			fullDesc: [
 				{
 					element: 'p',
@@ -252,14 +244,14 @@ const projectsState = {
 					element: 'p',
 					text: "Design isn't my strongest suit so I've tried to make a fairly simple and clear design. With a narrow color scheme. I really like the skeumorphic trend and have used that since it goes well with the simplicity.",
 				},
-				{
-					element: 'h',
-					text: 'Challenges'
-				},
-				{
-					element: 'p',
-					text: "It was important to make good use of CSS Grid and avoid too much div-soup, it has however brought some challenges with routing and tansitions, for example React-Transition-Group didn't work well without pages having a parant container, whereas Framer-Motion was a better fit",
-				},
+				// {
+				// 	element: 'h',
+				// 	text: 'Challenges'
+				// },
+				// {
+				// 	element: 'p',
+				// 	text: "It was important to make good use of CSS Grid and avoid too much div-soup, it has however brought some challenges with routing and tansitions, for example React-Transition-Group didn't work well without pages having a parant container, whereas Framer-Motion was a better fit",
+				// },
 			]
 		},
 		// todoapp: {

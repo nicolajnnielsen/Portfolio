@@ -4,7 +4,7 @@ export const PageTransition = {
 }
 
 const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
-const articleVar = {
+const PageVariant = {
 	initial: { scale: 0.9, opacity: 0 },
 	enter: { scale: 1, opacity: 1, transition },
 	exit: {
@@ -14,4 +14,4 @@ const articleVar = {
 	}
 }
 
-export default articleVar;
+export default PageVariant;

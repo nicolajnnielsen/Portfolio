@@ -65,7 +65,7 @@
 			grid-template-rows: 120px 650px 0;
 		}
 		&.page-front {
-			grid-template-rows: 120px 250px 450px;
+			grid-template-rows: 120px 250px 730px;
 		}
 		&.page-portfolio-item {
 			grid-template-rows: 120px auto auto;
@@ -73,6 +73,12 @@
 		&.page-about {
 			grid-template-rows: 120px 450px 650px;
 		}
+	}
+}
+
+@media (min-width: 991px) {
+	.page-wrapper.page-front {
+		grid-template-rows: 120px 250px 450px;
 	}
 }
 

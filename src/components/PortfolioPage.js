@@ -4,7 +4,7 @@ import projectState from '../projectState';
 import PortfolioCard from './PortfolioCard';
 
 const PortfolioPage = () => {
-	const [projects, setProjects] = useState(projectState.projects);
+	const [projects] = useState(projectState.projects);
 	useEffect(() => {
 		const pageWrapper = document.getElementById('route-wrapper');
 		pageWrapper.classList.add('page-portfolio');

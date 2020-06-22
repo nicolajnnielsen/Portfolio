@@ -11,21 +11,107 @@
 
 .frontpage-intro {
 	box-shadow: none;
-	// TODO - Fallback for clamp - include a rem in middle value to support font size change
 
 	h1 {
 		color: #DD0048;
 		/* color: #ff2975; */
 		color: #16B4DE;
-		font-size: 3.5rem;
-		font-size: clamp(1.875rem, 6.5vw, 3.5rem);
+		font-size: 1.875rem;
 		margin: 0 0 0.25em;
 
 	}
 
 	h2 {
-		font-size: clamp(1.25rem, 3.5vw, 2rem);
+		font-size: 1.125rem;
+		color: rgba(255,255,255,0.9);
+		// color: white;
 
+		.highlight {
+			color: #DD0048;
+		}
+	}
+}
+
+@media (min-width: 500px) {
+	.frontpage-intro h1 {
+		font-size: 2rem;
+	}
+}
+
+@media (min-width: 690px) {
+	.frontpage-intro {
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+			font-size: 1.25rem;
+		}
+	} 
+}
+
+@media (max-width: 790px) {
+	@supports (font-size: clamp(1.875rem, 6.5vw, 3.5rem)) {
+		.frontpage-intro {
+			h1 {
+				font-size: clamp(1.875rem, 6.5vw, 2.625rem);
+			}
+	
+			h2 {
+				font-size: clamp(1.125rem, 3.75vw, 1.625rem);
+			}
+		}
+	}
+}
+
+@media (min-width: 791px) {
+	.frontpage-intro {
+		h1 {
+			font-size: 2.75rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+	} 
+}
+
+
+@media (min-width: 961px) {
+	.frontpage-intro {
+		h1 {
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-size: 1.75rem;
+		}
+	} 
+}
+
+@media (min-width: 1500px) {
+	.frontpage-intro {
+		h1 {
+			font-size: 3.5rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+	} 
+}
+
+@media (min-width: 791px) {
+	@supports (font-size: clamp(1.875rem, 6.5vw, 3.5rem)) {
+		.frontpage-intro {
+			h1 {
+				font-size: clamp(2.625rem, 4vw, 3.5rem);
+			}
+	
+			h2 {
+				font-size: clamp(1.625rem, 2.25vw, 2rem);
+			}
+		}
 	}
 }
 
@@ -57,7 +143,7 @@
 	}
 }
 
-@media (min-width: 961px) {
+@media (min-width: 991px) {
 	.portfolio.frontpage-portfolio {
 		display: grid;
 		grid-row: content-2 / content-3;

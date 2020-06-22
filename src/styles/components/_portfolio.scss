@@ -148,6 +148,10 @@ body.fullScreen {
 	}
 }
 
+.portfolio-card__btn {
+	font-size: 1.125rem;
+}
+
 @media (pointer: fine) {
 	.portfolio-card:after {
 		transform: translateY(0);

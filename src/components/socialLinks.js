@@ -1,7 +1,6 @@
 import React from 'react';
-import {ReactComponent as Github} from '../images/social/github.svg'
-import {ReactComponent as LinkedIn} from '../images/social/linkedin.svg'
-import {ReactComponent as Proton} from '../images/social/protonmail.svg'
+import {ReactComponent as Github} from '../images/social/github.svg';
+import {ReactComponent as LinkedIn} from '../images/social/linkedin.svg';
 import {ReactComponent as Resume} from '../images/resume-icon6.svg';
 
 
